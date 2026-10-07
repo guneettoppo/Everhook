@@ -249,5 +249,3 @@ npm run dev            # UI on :5173
 | `POST` | `/api/v1/demo/reset` | Clear demo data |
 | `GET` | `/health` | Uptime check |
 | `GET` | `/metrics` | Prometheus metrics |
-#   E v e r h o o k  
- 
