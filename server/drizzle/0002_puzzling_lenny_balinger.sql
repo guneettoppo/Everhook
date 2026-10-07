@@ -1,0 +1,1 @@
+ALTER TABLE "subscribers" ADD COLUMN "secret" text DEFAULT '' NOT NULL;

@@ -1,0 +1,18 @@
+.star-button {
+  --border-radius: var(--radius-md);
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.star-button .star-border-container {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.star-button .star-border-container .inner-content {
+  padding: 0;
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Local reference docs 
+*.md
+!README.md
+
+# Test / coverage
+coverage/
+
+# OS / editor
+.DS_Store
+*.log
+
+# Vite
+web/.vite/
+
+# Demo mock state (failure-mode toggle, machine-specific)
+mock-state.json
+server/mock-state.json

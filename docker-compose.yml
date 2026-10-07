@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: everhook-postgres
+    environment:
+      POSTGRES_USER: everhook
+      POSTGRES_PASSWORD: everhook_dev
+      POSTGRES_DB: everhook
+    ports:
+      - "5432:5432"
+    volumes:
+      - everhook-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U everhook"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: everhook-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  everhook-pgdata:
